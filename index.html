@@ -1,0 +1,357 @@
+<!-- rebuild -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Amma ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#050505,#121212,#1a0010);
+color:white;
+overflow-x:hidden;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:30px;
+}
+
+.hero img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid hotpink;
+box-shadow:0 0 30px hotpink;
+margin-bottom:20px;
+animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+from{box-shadow:0 0 15px hotpink;}
+to{box-shadow:0 0 40px deeppink;}
+}
+
+.hero h1{
+font-size:3rem;
+color:hotpink;
+text-shadow:0 0 15px hotpink;
+}
+
+.hero p{
+margin-top:15px;
+font-size:1.1rem;
+color:#ddd;
+max-width:600px;
+}
+
+/* ================= BUTTON ================= */
+
+button{
+margin-top:25px;
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:hotpink;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff2f92;
+transform:scale(1.05);
+}
+
+/* ================= MESSAGE ================= */
+
+.message{
+padding:80px 20px;
+text-align:center;
+background:#0b0b0b;
+}
+
+.message h2{
+color:hotpink;
+font-size:2.2rem;
+margin-bottom:20px;
+}
+
+.message p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#ddd;
+font-size:1rem;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+padding:80px 20px;
+}
+
+.gallery h2{
+text-align:center;
+color:hotpink;
+font-size:2.2rem;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.grid img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+transition:0.4s;
+box-shadow:0 0 15px rgba(255,105,180,0.4);
+}
+
+.grid img:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px hotpink;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+text-align:center;
+padding:50px 20px;
+background:black;
+color:#aaa;
+}
+
+.footer span{
+color:hotpink;
+}
+.slideshow{
+width:320px;
+height:420px;
+margin:auto;
+position:relative;
+perspective:1000px;
+}
+
+.slide{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:25px;
+opacity:0;
+transform:scale(0.9);
+transition:all 1s ease;
+box-shadow:0 0 30px rgba(255,105,180,0.6);
+border:3px solid hotpink;
+background:#000;
+}
+
+.slide.active{
+opacity:1;
+transform:scale(1);
+z-index:2;
+}
+
+
+
+
+.slideshow{
+width:100%;
+overflow:hidden;
+padding:40px 0;
+}
+
+.track{
+display:flex;
+width:max-content;
+gap:25px;
+animation:scroll 30s linear infinite;
+}
+
+
+.track img{
+width:260px;
+height:360px;
+object-fit:cover;
+border-radius:25px;
+border:3px solid hotpink;
+box-shadow:0 0 25px rgba(255,105,180,0.7);
+transition:0.3s;
+}
+
+.track img:hover{
+transform:scale(1.05);
+}
+
+@keyframes scroll{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-50%);
+}
+}
+
+
+
+
+/* ================= HEARTS ================= */
+
+.heart{
+position:fixed;
+font-size:22px;
+color:hotpink;
+animation:float 6s linear infinite;
+top:-20px;
+z-index:9999;
+pointer-events:none;
+}
+
+
+@keyframes float{
+0%{transform:translateY(100vh);opacity:0;}
+50%{opacity:1;}
+100%{transform:translateY(-10vh);opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+    <h1 style="color:white">SITE WORKING</h1>
+
+    <audio id="bgMusic" autoplay loop>
+  <source src="./amma-song_mJjej3FD.mp3" type="audio/mpeg">
+</audio>
+<audio id="voiceMsg">
+  <source src="./my-voice_LFRN2dyT.ogg" type="audio/ogg">
+</audio>
+
+
+<!-- HERO -->
+<section class="hero">
+<img src="./WhatsApp Image 2026-01-29 at 10.33.47 PM.jpeg">
+<h1>Happy Birthday Amma ❤️</h1>
+<p>You are my first teacher, my biggest strength, and my forever hero.</p>
+<button onclick="scrollToMessage()">Open My Heart</button>
+</section>
+
+<!-- MESSAGE -->
+<section class="message" id="msg">
+<h2>Dear Amma 💖</h2>
+<p>
+Thank you for every sacrifice, every prayer, and every sleepless night for me.<br><br>
+You believed in me even when I doubted myself.<br>
+You stood beside me when I had nothing.<br><br>
+I may not have money today,<br>
+But I promise one day I will give you the best life you deserve.<br><br>
+Everything I become will be because of you.<br><br>
+I love you forever and ever Amma ❤️
+</p>
+<br><br>
+<button onclick="playVoice()">Play My Voice 🎤</button>
+
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+<h2>Our Beautiful Memories 📸</h2>
+<div class="slideshow">
+<div class="track">
+<img src="./WhatsApp Image 2026-01-29 at 6.05.50 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 6.26.56 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 10.40.04 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 10.38.26 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 10.41.28 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 10.46.45 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 6.05.50 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 6.26.56 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 10.40.04 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 10.38.26 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 10.41.28 PM.jpeg">
+<img src="./WhatsApp Image 2026-01-29 at 10.46.45 PM.jpeg">
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+Made with infinite Love by your <span>son ma</span>
+</div>
+
+<script>
+
+<script>
+
+function scrollToMessage(){
+document.getElementById("msg").scrollIntoView({behavior:"smooth"});
+}
+
+/* Floating hearts */
+setInterval(()=>{
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},400);
+
+/* Extra floating hearts */
+setInterval(()=>{
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20 + Math.random()*30) + "px";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},200);
+
+/* Invisible touch music */
+document.addEventListener("click", function () {
+  const music = document.getElementById("bgMusic");
+  music.play();
+}, { once: true });
+
+function playVoice(){
+  const v = document.getElementById("voiceMsg");
+  v.play();
+}
+
+</script>
+
+
+</script>
+
+</body>
+</html>
